@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@CrossOrigin(origins = "https://react-apps-weld.vercel.app/")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CompilerController {
 
 	@GetMapping("/")
