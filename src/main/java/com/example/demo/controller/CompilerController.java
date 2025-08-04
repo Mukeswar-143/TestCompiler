@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 @CrossOrigin(origins = "https://react-apps-weld.vercel.app/")
 public class CompilerController {
-	@GetMapping("/test")
+	@GetMapping("/")
 	public String getMethodName() {
 		return "Hello from CompilerController!";
 	}
