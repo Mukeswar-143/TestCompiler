@@ -21,12 +21,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 @CrossOrigin(origins = "https://react-apps-weld.vercel.app/")
 public class CompilerController {
+
 	@GetMapping("/")
-	public String getMethodName() {
+	public String homeString() {
 		return "Hello from CompilerController!";
 	}
-	
-
 	@PostMapping("/java")
 	public ResponseEntity<List<String>> compileJava(@RequestBody CodeRequest request) throws IOException, InterruptedException {
 	    String fileName = "Main.java";
