@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
+@CrossOrigin(origins = "*")
 public class CompilerController {
 
 	@GetMapping("/")
