@@ -14,10 +14,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.CodeRequest;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @CrossOrigin(origins = "https://react-apps-weld.vercel.app/")
 public class CompilerController {
+	@GetMapping("/test")
+	public String getMethodName() {
+		return "Hello from CompilerController!";
+	}
+	
 
 	@PostMapping("/java")
 	public ResponseEntity<List<String>> compileJava(@RequestBody CodeRequest request) throws IOException, InterruptedException {
